@@ -1,0 +1,28 @@
+جون إيليا رسمي
+
+section: 1 
+
+  
+docker build -t johntask3-image . 
+
+docker run -d -p 3000:3000 --name johntask3-container -v johntask3_data:/app johntask3-image 
+
+docker ps 
+
+docker stop johntask3-container 
+
+docker rm johntask3-container 
+
+docker rmi johntask3-image 
+
+docker volume create johntask3_data 
+
+docker run -d -p 3000:3000 --name johntask3-container -v johntask3_data:/app johntask3-image 
+
+docker volume ls 
+
+docker volume inspect johntask3_data 
+
+docker volume rm johntask3_data 
+
+docker volume prune
